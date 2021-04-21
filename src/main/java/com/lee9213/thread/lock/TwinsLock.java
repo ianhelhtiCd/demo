@@ -59,7 +59,7 @@ public class TwinsLock implements Lock {
 
     @Override
     public boolean tryLock() {
-        System.out.println("master");
+        System.out.println("lee9213/test1");
         return true;
     }
 
