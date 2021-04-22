@@ -54,12 +54,11 @@ public class TwinsLock implements Lock {
 
     @Override
     public void lockInterruptibly() throws InterruptedException {
-        sync.releaseShared(1);
     }
 
     @Override
     public boolean tryLock() {
-        return true;
+        return false;
     }
 
     @Override
@@ -69,7 +68,7 @@ public class TwinsLock implements Lock {
 
     @Override
     public void unlock() {
-
+        sync.releaseShared(1);
     }
 
     @Override
